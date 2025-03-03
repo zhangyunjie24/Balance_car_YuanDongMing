@@ -28,25 +28,31 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 64,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 60,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 61,
+				"line" : 21,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
@@ -58,31 +64,37 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 30,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 36,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 49,
+				"line" : 38,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 54,
+				"line" : 56,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 52,
+				"line" : 54,
 				"parent" : 0
 			}
 		]
@@ -96,77 +108,81 @@
 					"fragment" : "-g -std=gnu11 -fdiagnostics-color=always"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
+					"fragment" : "-mfloat-abi=soft"
+				},
+				{
+					"backtrace" : 7,
 					"fragment" : "-mcpu=cortex-m3"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"fragment" : "-mthumb"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"fragment" : "-mthumb-interwork"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-ffunction-sections"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-fdata-sections"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-fno-common"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-fmessage-length=0"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 10,
 					"fragment" : "-Og"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 10,
 					"fragment" : "-g"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"define" : "DEBUG"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"define" : "STM32F103xE"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"define" : "USE_HAL_DRIVER"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Core/Inc"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/STM32F1xx_HAL_Driver/Inc"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/CMSIS/Include"
 				}
 			],
@@ -210,85 +226,89 @@
 					"fragment" : "-g"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
+					"fragment" : "-mfloat-abi=soft"
+				},
+				{
+					"backtrace" : 7,
 					"fragment" : "-mcpu=cortex-m3"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"fragment" : "-mthumb"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"fragment" : "-mthumb-interwork"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-ffunction-sections"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-fdata-sections"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-fno-common"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 8,
 					"fragment" : "-fmessage-length=0"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"fragment" : "-x"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 9,
 					"fragment" : "assembler-with-cpp"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 10,
 					"fragment" : "-Og"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 10,
 					"fragment" : "-g"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"define" : "DEBUG"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"define" : "STM32F103xE"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 11,
 					"define" : "USE_HAL_DRIVER"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Core/Inc"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/STM32F1xx_HAL_Driver/Inc"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 12,
 					"path" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Drivers/CMSIS/Include"
 				}
 			],
@@ -314,31 +334,36 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "-specs=nano.specs",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
 				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/cmake-build-debug/Balance_car_YuanDongMing.map",
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 4,
 				"fragment" : "-mcpu=cortex-m3",
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 4,
 				"fragment" : "-mthumb",
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 4,
 				"fragment" : "-mthumb-interwork",
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 4,
+				"backtrace" : 5,
 				"fragment" : "-T",
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 4,
+				"backtrace" : 5,
 				"fragment" : "D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/STM32F103RCTX_FLASH.ld",
 				"role" : "flags"
 			}

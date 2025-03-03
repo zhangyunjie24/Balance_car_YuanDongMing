@@ -7,11 +7,11 @@ ASM_DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
 
 ASM_INCLUDES = -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Core\Inc -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\STM32F1xx_HAL_Driver\Inc -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\CMSIS\Device\ST\STM32F1xx\Include -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\CMSIS\Include
 
-ASM_FLAGS = -g -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -x assembler-with-cpp -Og -g
+ASM_FLAGS = -g -mfloat-abi=soft -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -x assembler-with-cpp -Og -g
 
 C_DEFINES = -DDEBUG -DSTM32F103xE -DUSE_HAL_DRIVER
 
 C_INCLUDES = -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Core\Inc -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\STM32F1xx_HAL_Driver\Inc -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\CMSIS\Device\ST\STM32F1xx\Include -ID:\A_My_DOCUMENTS\embedded_programme\Balance_car_YuanDongMing\Drivers\CMSIS\Include
 
-C_FLAGS = -g -std=gnu11 -fdiagnostics-color=always -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g
+C_FLAGS = -g -std=gnu11 -fdiagnostics-color=always -mfloat-abi=soft -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g
 

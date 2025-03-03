@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/A_My_DOCUMENTS/embedded_programme/Balance_car_YuanDongMing/Core/Startup/startup_stm32f103rctx.s
+

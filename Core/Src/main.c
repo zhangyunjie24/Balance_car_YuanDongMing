@@ -18,11 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "../../bsp/music.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,13 +44,17 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+uint8_t g_btn1_flag = 0;  //g:global, btn:button
+uint8_t g_btn2_flag = 0;
 
+uint8_t g_tim6_flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void btn_proc(void);
+void LED_proc(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -86,6 +91,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_TIM6_Init();
+  MX_TIM1_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -94,6 +102,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    btn_proc();
+    LED_proc();
     // HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, GPIO_PIN_RESET);
     // HAL_Delay(1000);
     // HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, GPIO_PIN_SET);
@@ -153,6 +163,23 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void btn_proc(void) {
+  if (g_btn1_flag == 1) {
+    g_btn1_flag = 0;
+    HAL_TIM_Base_Start_IT(&htim6);
+  }
+  if (g_btn2_flag == 1) {
+    g_btn2_flag = 0;
+    HAL_TIM_Base_Stop_IT(&htim6);
+  }
+}
+
+void LED_proc(void) {
+  if (g_tim6_flag == 1) {
+    g_tim6_flag = 0;
+    HAL_GPIO_TogglePin(LED_0_GPIO_Port, LED_0_Pin);
+  }
+}
 
 /* USER CODE END 4 */
 

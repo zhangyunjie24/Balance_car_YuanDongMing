@@ -4,6 +4,8 @@
 
 #include "interrupt.h"
 
+#include "music.h"
+
 extern uint8_t g_btn1_flag;
 extern uint8_t g_btn2_flag;
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
@@ -18,5 +20,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 extern uint8_t g_tim6_flag;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    g_tim6_flag = 1;
+    if (htim->Instance == TIM6) {
+        g_tim6_flag = 1;
+    }
+    else if (htim->Instance == TIM7) {
+        g_music_flag = 1;
+    }
+
 }

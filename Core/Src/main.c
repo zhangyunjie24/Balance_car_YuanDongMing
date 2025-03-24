@@ -95,7 +95,7 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
-
+  Music_Menu_On();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,6 +104,7 @@ int main(void)
   {
     btn_proc();
     LED_proc();
+    MusicProcess();
     // HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, GPIO_PIN_RESET);
     // HAL_Delay(1000);
     // HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, GPIO_PIN_SET);

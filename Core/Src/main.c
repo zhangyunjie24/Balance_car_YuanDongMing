@@ -19,11 +19,15 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "../../bsp/music.h"
+#include <stdio.h>
+#include <sys/errno.h>
+#include <unistd.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,7 +63,15 @@ void LED_proc(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+//using nano, use _write to rewrite
+int _write(int fd, char *ptr, int len) {
+  if (fd == STDOUT_FILENO || fd == STDERR_FILENO) {
+    HAL_UART_Transmit(&huart1, (uint8_t *)ptr, len, HAL_MAX_DELAY);
+    return len;
+  }
+  errno = EIO;
+  return -1;
+}
 /* USER CODE END 0 */
 
 /**
@@ -94,14 +106,18 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM1_Init();
   MX_TIM7_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   Music_Menu_On();
+  printf("INIT OK\n");
+  HAL_UART_Transmit(&huart1, (uint8_t *)"Init", 5, HAL_MAX_DELAY );
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
     btn_proc();
     LED_proc();
     MusicProcess();
